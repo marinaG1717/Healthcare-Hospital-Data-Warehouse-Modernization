@@ -1,0 +1,6 @@
+.env
+.env.*
+dbt/profiles.yml
+target/
+dbt_packages/
+__pycache__/
