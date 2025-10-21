@@ -1,5 +1,12 @@
 
 # Healthcare: Hospital Data Warehouse Modernization
-Bronze→Silver→Gold on Databricks + dbt, with Metabase on top.
-- DAB deploy: `databricks bundle deploy`
-- Jobs run: `databricks bundle run <job-name>`
+
+Layers:
+- Databricks: Bronze/Silver/Gold Delta tables, jobs, SQL
+- dbt: Modeling (staging → intermediate → marts), tests, docs
+- Metabase: Dashboards (wired to gold schema)
+
+## Quick start
+- infra: `infrastructure/terraform/databricks`
+- databricks code: `databricks/…`
+- dbt project: `dbt/…`
