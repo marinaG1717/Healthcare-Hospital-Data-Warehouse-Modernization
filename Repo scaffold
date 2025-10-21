@@ -1,0 +1,29 @@
+.
+├─ .gitignore
+├─ README.md
+├─ databricks.yml                 # DAB bundle (jobs, clusters, pipelines)
+├─ env/
+│  └─ .env.example                # local dev variables (no secrets)
+├─ infra/
+│  ├─ sql/                        # one-time UC setup SQL
+│  │  ├─ 00_create_uc_objects.sql
+│  │  └─ 01_grants.sql
+├─ pipelines/
+│  ├─ bronze_ingest/
+│  │  └─ bronze_ingest.py
+│  ├─ silver_curate/
+│  │  └─ silver_curate.py
+│  └─ gold_publish/
+│     └─ gold_publish.py
+├─ dbt/
+│  ├─ profiles_template.yml
+│  ├─ dbt_project.yml
+│  ├─ packages.yml
+│  └─ models/
+│     ├─ sources.yml
+│     ├─ staging/
+│     ├─ intermediate/
+│     └─ marts/
+└─ .github/
+   └─ workflows/
+      └─ ci.yml
